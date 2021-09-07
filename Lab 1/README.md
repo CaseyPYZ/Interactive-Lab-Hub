@@ -58,19 +58,19 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 To stage the interaction with your interactive device, think about:
 
-_Setting:_
+>_Setting:_
 >Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
 
-_Players:_
+>_Players:_
 >Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
 
-_Activity:_
+>_Activity:_
 >What is happening between the actors?
 
-_Goals:_
+>_Goals:_
 >What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
 
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
+>The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 
 \*\***Describe your setting, players, activity and goals here.**\*\*
 
@@ -78,10 +78,15 @@ The interactive device can be anything *except* a computer, a tablet computer or
 
 **Players:** Players involved in this setting are people with **hearing impairments**, either from a permanet or temporary physical condition or something else, for whom the usual sound-based "doorbells" wouldn't function well.
 
-People that live in the same setting would also be involved.
+Other players involved in this interaction are visitors of the main player, and people that live in the same setting.
 
-**Activities:** _
+
+**Activities:** Visitors arrive at the door of the main player, and since the main player is hearing impaired, knocking or doorbell-ing wouldn't work in notifying them the visitors' arrival. So instead, the visitor presses a "door light" button on the door, and a "door light" lights up in the room. The main player can now see the light and know they have a visitor at the door.
+
 **Goals:** _
+
+* *Main player:* Know when there's a visitor at the door when sound isn't an option.
+* *Visitor:* Notify the main player of their arrival.
 
 
 
