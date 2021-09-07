@@ -74,6 +74,8 @@ Sketch a storyboard of the interactions you are planning. It does not need to be
 
 \*\***Include a picture of your storyboard here**\*\*
 
+![The Door Light: Story board #1](./assets/images/lab1_doorlight_storyboard_1.png)
+
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 
 \*\***Summarize feedback you got here.**\*\*
@@ -84,6 +86,8 @@ Present your idea to the other people in your breakout room. You can just get fe
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
+
+One thing that I noticed at this stage is that the placement of the device might be a problem. Originally, the idea is to 
 
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
 
@@ -99,6 +103,20 @@ We invented this tool for this lab!
 If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
+
+### **The Door Light: Prototype**
+
+1. Idle status: when no one is at the door
+
+![The Door Light: prototype #1](./assets/images/lab1_pt_1.jpeg)
+
+2. Active status: when someone's knocking on the door(pressing the "doorbell" button)
+
+![The Door Light: prototype #2](./assets/images/lab1_pt_2.jpeg)
+
+3. An alternative placement
+
+![The Door Light: prototype #3](./assets/images/lab1_pt_3.jpeg)
 
 
 ## Part D. Wizard the device
