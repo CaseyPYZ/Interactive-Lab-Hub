@@ -161,11 +161,13 @@ Think about the setting of the device: is the environment a place where the devi
 
 ## Part F. Record
 
-\*\***Take a video of your prototyped interaction.**\*\*
+>\*\***Take a video of your prototyped interaction.**\*\*
 
-\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+>\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
+>Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
+[**VIDEO LINK**](https://youtu.be/8FdEn6f8KcI)
+![video thumbnail](./assets/images/lab1_video_thumbnail.png)
 
 
 # Staging Interaction, Part 2 
