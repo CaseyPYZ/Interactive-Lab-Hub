@@ -169,6 +169,9 @@ Think about the setting of the device: is the environment a place where the devi
 [**VIDEO LINK**](https://youtu.be/8FdEn6f8KcI)
 ![video thumbnail](./assets/images/lab1_video_thumbnail.png)
 
+### *Acknowledgements*
+Actor: Anpu Li
+
 
 # Staging Interaction, Part 2 
 
