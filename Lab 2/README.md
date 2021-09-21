@@ -191,11 +191,27 @@ After that, Git will ask you to login to your GitHub account to push the updates
 ## Make a short video of your modified barebones PiClock
 
 \*\*\***Take a video of your PiClock.**\*\*\*
-[VIDEO LINK](https://youtu.be/CRNJnywrDUs)
+
+**[VIDEO LINK](https://youtu.be/CRNJnywrDUs)**
 
 ## Part G. 
-## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
+>Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
+### **Ideation**
+The clock in this lab is created under the notion of time in proportions. Our recognition of time is seperated in two portions and one point: _past_ is the time behind us, _future_ is time that's yet to come, and _now_ is the point where these two portions meet.
+
+Following this way of thinking, we can say that we tell which point of _now_ we're at, by knowing how big are the _past_ and _future_ portions respectifully. 2 AM means we have 2/24 proportion of the day has passed, and 22/24 is yet to come.
+
+The design of this clock follows this notion. At the beginning of a day, the clock starts with a black screen. For every new second that has passed, a colored dot shows up on a random spot on the screen. Eventually, there will be 86400 colored dots painted on the screen, which will be fully colored by then.
+
+For a step further, it would be cool to give the clock an hour glass type of interface and interaction. For instance, after the colored dots show up at their random initial spot, they can fall to one side of the screen with a gravity effect. And when the screen is tilted, the exisiting dots should slide along like actual sand.
+
+However, applying such physics effects to all 86400 dots could be computationally demanding, and the current single-loop code structure won't work the best. I'll have to look into this a bit more.
+
+### **Sketch**
+
+<img src="./IDD_Lab2.jpeg" />
+<br>
 
 # Prep for Part 2
 
