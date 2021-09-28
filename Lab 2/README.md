@@ -16,19 +16,24 @@ Be generous in acknowledging their contributions! And also recognizing any other
 ### Get your kit
 If you are remote but in the US, let the teaching team know you need the parts mailed.
 
+
 If you are in New York, you can come to the campus and pick up your parts. If you have not picked up your parts by Thursday lab you should come to Tata 351.
 
 ### Set up your Lab 2
 
 1. [Pull changes from the Interactive Lab Hub](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2021Fall/readings/Submitting%20Labs.md#to-pull-lab-updates) so that you have your own copy of Lab 2 on your own lab hub. (This may have to be done again at the start of lab on Thursday.)
-  
   If you are organizing your Lab Hub through folder in local machine, go to terminal, cd into your Interactive-Lab-Hub folder and run:
 
   ```
   Interactive-Lab-Hub $ git remote add upstream https://github.com/FAR-Lab/Interactive-Lab-Hub.git
   Interactive-Lab-Hub $ git pull upstream Fall2021
+  ```
+  
+  The reason why we are adding a upstream with **course lab-hub** instead of yours is because the local Interactive-Lab-Hub folder is linked with your own git repo already. Try typing ``git remote -v`` and you should see there is the origin branch with your own git repo. We here add the upstream to get latest updates from the teaching team by pulling the **course lab-hub** to your local machine. After your local folder got the latest updates, push them to your remote git repo by running:
+  
+  ```
   Interactive-Lab-Hub $ git add .
-  Interactive-Lab-Hub $ git commit -m'merge'
+  Interactive-Lab-Hub $ git commit -m "message"
   Interactive-Lab-Hub $ git push
   ```
   Your local and remote should now be up to date with the most recent files.
@@ -75,6 +80,7 @@ The support for password authentication of GitHub was removed on August 13, 2021
 
 Following the steps listed [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) from GitHub to set up a token. Depends on your preference, you can set up and select the scopes, or permissions, you would like to grant the token. This token will act as your GitHub password later when you use the terminal on your Pi to sync files with your lab-hub repo.
 
+
 ## Part B. 
 ### Try out the Command Line Clock
 Clone your own lab-hub repo for this assignment to your Pi and change the directory to Lab 2 folder (remember to replace the following command line with your own GitHub ID):
@@ -84,7 +90,6 @@ Clone your own lab-hub repo for this assignment to your Pi and change the direct
 (circuitpython) pi@ixe00:~$ cd Interactive-Lab-Hub/Lab\ 2/
 ```
 Depends on the setting, you might be asked to provide your GitHub user name and password. Remember to use the "Personal Access Tokens" you just set up as the password instead of your account one!
-
 
 Install the packages from the requirements.txt and run the example script `cli_clock.py`:
 
@@ -191,15 +196,32 @@ After that, Git will ask you to login to your GitHub account to push the updates
 ## Make a short video of your modified barebones PiClock
 
 \*\*\***Take a video of your PiClock.**\*\*\*
-[VIDEO LINK](https://youtu.be/CRNJnywrDUs)
+
+**[VIDEO LINK](https://youtu.be/CRNJnywrDUs)**
 
 ## Part G. 
-## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
+>Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
+### **Ideation**
+The clock in this lab is created under the notion of time in proportions. Our recognition of time is seperated in two portions and one point: _past_ is the time behind us, _future_ is time that's yet to come, and _now_ is the point where these two portions meet.
+
+Following this way of thinking, we can say that we tell which point of _now_ we're at, by knowing how big are the _past_ and _future_ portions respectifully. 2 AM means we have 2/24 proportion of the day has passed, and 22/24 is yet to come.
+
+The design of this clock follows this notion. At the beginning of a day, the clock starts with a black screen. For every new second that has passed, a colored dot shows up on a random spot on the screen. Eventually, there will be 86400 colored dots painted on the screen, which will be fully colored by then.
+
+For a step further, it would be cool to give the clock an hour glass type of interface and interaction. For instance, after the colored dots show up at their random initial spot, they can fall to one side of the screen with a gravity effect. And when the screen is tilted, the exisiting dots should slide along like actual sand.
+
+However, applying such physics effects to all 86400 dots could be computationally demanding, and the current single-loop code structure won't work the best. I'll have to look into this a bit more.
+
+### **Sketch**
+
+<img src="./IDD_Lab2.jpeg" />
+<br>
 
 # Prep for Part 2
 
-1. Pick up remaining parts for kit.
+1. Pick up remaining parts for kit on Thursday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
+  
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
 
