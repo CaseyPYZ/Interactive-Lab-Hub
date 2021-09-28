@@ -215,7 +215,7 @@ However, applying such physics effects to all 86400 dots could be computationall
 
 ### **Sketch**
 
-<img src="./IDD_Lab2.jpeg" />
+<img src="./img/IDD_Lab2.jpeg" />
 <br>
 
 # Prep for Part 2
@@ -239,4 +239,21 @@ Clock of Pi, stage 2:
 
 [VIDEO LINK](https://youtu.be/c_PjSdCknAc)
 
+This video was filmed around 8PM in the evening. This is reflected by the "full" and "empty" protion of the clock interface, since there's around 1/6 of the screen left empty.
 
+
+### **Modifications**
+
+In this iteration, I made a few modifications to the original interface design.
+
+1. Dot changed from one set color to randomly generated colors. This yields a better visual outcome.
+2. Added interaction that would change the "randomness" of the display.
+
+#### **Interaction**
+
+The clock has two interfaces, a random version and a orderly version. 
+
+<img src="./img/IDD_lab2_clock_1.png" />
+<img src="./img/IDD_lab2_clock_2.jpeg" />
+
+They both demonstrate time through portions of _past_ and _future_, but people might have different preferences. The clock transition between the two display versions when buttons are pressed. Hold down the top button and the clock would transition slowly to its orderly version, vice versa with the other button, as shown in the video above. You can also choose to stay anywhere in between.
