@@ -131,8 +131,15 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
+
+* One thing I noticed in part 1 is that the wording of the conversation needs to be more carefully designed, and shouldn't leave too much vague space for interpretation. Or else the user might interpret meanings differently, and go on a interation path that's not originally in the picture.
+
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
+
+* I think touch would work well in my design. My device "the debug duck" is meant to stay idle for most of the time, and only be active when the user talks to it. A "hello Siri" type of speech trigger is cool, but touch-based activation would be more stable and robust.
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
+
 
 ## Prototype your system
 
@@ -155,7 +162,8 @@ Answer the following:
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+* This version of the device does not involve a remote/online controller, other than a simple "on/off" switch.
+* However, given that there's a "note-archive" aspect to the design, I think the system is only complete with a software interface that allows storage, view and edit of notes, which should be in both audio and speech-to-text transcripted text form. (Or should this be by the user's choice?) 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
