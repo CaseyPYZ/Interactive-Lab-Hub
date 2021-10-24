@@ -8,6 +8,7 @@
 
 import time
 import subprocess
+import itertools
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -71,9 +72,6 @@ def get_gesture():
 
     return False
 
-# Get 9-key input from capacitive sensor values
-def get_9key_input():
-    
 
 
 while True:
