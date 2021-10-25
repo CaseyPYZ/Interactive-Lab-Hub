@@ -8,6 +8,7 @@
 
 import time
 import subprocess
+import threading
 import t9_imitation as t9
 
 from PIL import Image, ImageDraw, ImageFont
@@ -19,6 +20,7 @@ import adafruit_ssd1306
 import adafruit_mpr121
 from adafruit_apds9960.apds9960 import APDS9960
 
+### Board & sensor initialization
 # Create the I2C interface.
 i2c = busio.I2C(SCL, SDA)
 
@@ -57,8 +59,46 @@ bottom = height - padding
 # Move left to right keeping track of the current x position for drawing shapes.
 x = 0
 
+
 # Load default font.
 font = ImageFont.load_default()
+
+
+# Global Input buffers
+NUM_LST = [] # global
+WORD_LST = []
+TEMP_WORD = ""
+SENTENCE = []
+GESTURE = "IDLE"
+
+# Thread Class
+class GestureSensorThread(threading.Thread):
+    def __init__(self, name, lock):
+        threading.Thread.__init__(self, name=name)
+        self.name = name
+        self.lock = lock
+
+    def run(self):
+        # Sensor's logic
+        global GESTURE, NUM_LST, SENTENCE
+        while True:
+            gesture = apds.gesture()
+            if gesture == 0x03:
+                self.lock.acquire()
+                GESTURE = "LEFT"
+                print(GESTURE)
+                self.lock.release()
+            elif gesture == 0x04:
+                self.lock.acquire()
+                GESTURE = "RIGHT"
+                self.lock.release()
+                print(GESTURE)
+            elif gesture == 0x01 or gesture == 0x02:
+                self.lock.acquire()
+                GESTURE = "IDLE"
+                self.lock.release()
+                print(GESTURE)
+
 
 # Speak
 def speak(instruction):
@@ -69,25 +109,12 @@ def speak(instruction):
     """ + f"say '{instruction}'"
     subprocess.call(command, shell=True)
 
-# Get gesture from APDS9960
-def get_gesture():
-    gesture = apds.gesture()
-    if gesture == 0x03:
-        return "LEFT"
-    elif gesture == 0x04:
-        return "RIGHT"
-
-    return False
-
-# Input buffers
-NUM_LST = [] # global
-WORD_LST = []
-TEMP_WORD = ""
-SENTENCE = []
 
 # Cap values: 8/9/10/11
 def get_t9_input(TEMP_WORD, WORD_LST, SENTENCE):    
     
+    global NUM_LST
+
     # Capacitive sensor values
     caps = [False] * 4
     
@@ -143,8 +170,12 @@ def get_t9_input(TEMP_WORD, WORD_LST, SENTENCE):
     return TEMP_WORD, WORD_LST, SENTENCE
 
 
-# GEST = subprocess.check_output(["python", "gesture_detection.py"], stderr=subprocess.STDOUT, shell=True)
+# Gesture sensor thread
+lock = threading.Lock()
+gesture_sensor = GestureSensorThread('gest', lock)
+gesture_sensor.start()
 
+# Main thread
 while True:
 
     # Draw a black filled box to clear the image.
@@ -159,26 +190,24 @@ while True:
     draw.text((x, top + 20), ' '.join(SENTENCE), font=font, fill=255)
 
     # Speak if SENTENCE & RIGHT
-    if len(SENTENCE) > 0:
-        # Get gesture
-        GESTURE = get_gesture()
-        # print(GESTURE)
-        if GESTURE and GESTURE == "RIGHT":
-            # Speak
-            speak(' '.join(SENTENCE))
-            # Clear input buffer
-            TEMP_WORD = ""
-            SENTENCE.clear()
+    if len(SENTENCE) > 1 and GESTURE == "RIGHT":
+        # Speak
+        speak(' '.join(SENTENCE))
+        # Clear input buffer
+        TEMP_WORD = ""
+        SENTENCE.clear()
+        GESTURE = "IDLE"
 
     # Backspace
-    if len(TEMP_WORD) > 0:
-        GESTURE = get_gesture()
-        print(GESTURE)
-        if GESTURE and GESTURE == "LEFT":
-            print("backspace")
-            NUM_LST.pop(-1)
+    if len(NUM_LST) > 0 and GESTURE == "LEFT":
+        # GESTURE = get_gesture()
+        print("---BACKSPACE---")
+        NUM_LST.pop(-1)
+        GESTURE = "IDLE"
 
     # Display image.
     disp.image(image)
     disp.show()
     time.sleep(0.5)
+
+gesture_sensor.join()
