@@ -84,6 +84,10 @@ Once connected, you should be able to see all the messages under the IDD topic. 
   ...
   ```
 
+
+https://user-images.githubusercontent.com/37056925/141694910-911e0bb8-1271-4ff7-8373-0100c9cdc4a7.mp4
+
+
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 
 ### Part C
@@ -106,6 +110,12 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
  ```
 
 **\*\*\*Include a picture of your setup here: what did you see on MQTT Explorer?\*\*\***
+
+![l6_pD_pic1](https://user-images.githubusercontent.com/37056925/141694918-18b86874-d7c5-494a-bd66-52f91ec0cf9c.png)
+
+
+https://user-images.githubusercontent.com/37056925/141694926-bf782622-3230-41a2-a661-167e3d235924.mp4
+
 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
 
