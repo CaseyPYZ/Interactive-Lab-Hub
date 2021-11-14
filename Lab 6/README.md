@@ -90,6 +90,7 @@ https://user-images.githubusercontent.com/37056925/141694910-911e0bb8-1271-4ff7-
 
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
+![Plant waterer](imgs/plant1.png?raw=true)
 
 ### Part C
 ### Streaming a Sensor
