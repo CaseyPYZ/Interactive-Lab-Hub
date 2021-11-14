@@ -153,7 +153,7 @@ Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-
 
 **\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
 
-Changing the variable "topic" in line 58 of color.py to a path like 'IDD/Colors/<<User>>' is enough to make a process which can change the screen based on a specific user, given that other users in the system play nice. There is no user authentication, so anyone could technically could publish a color to that User's channel. Code is in usercolor.py.
+Changing the variable "topic" in line 58 of color.py to a path like 'IDD/Colors/User' is enough to establish a process which can change the screen based on a specific user, given that other users in the wider system play nice. There is no user authentication, so anyone could technically could publish a color to that User's channel. Code is in usercolor.py.
 
 ### Part E
 ### Make it your own
