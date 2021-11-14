@@ -119,6 +119,8 @@ https://user-images.githubusercontent.com/37056925/141694926-bf782622-3230-41a2-
 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
 
+https://user-images.githubusercontent.com/37056925/141697039-60c582ab-b1cc-4a61-9ffd-919a67092569.mp4
+
 
 ### Part D
 ### The One True ColorNet
