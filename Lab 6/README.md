@@ -167,14 +167,20 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
 
+🥐
+
 #### **prototype stage 1: Writing to & reading from the MQTT server**
 
 
 https://user-images.githubusercontent.com/37056925/141864182-5b15a477-5b18-4189-bab0-d1da5312662e.mp4
 
+> Raspberry Pi writing its JoyStick data inputs to the MQTT server
 
 https://user-images.githubusercontent.com/37056925/141864087-614001a2-d141-413f-8568-9bb23017ad9c.mp4
 
+> This video shows a Raspberry Pi writing its JoyStick data inputs to the MQTT server, and reading from the server what the JoyStick wrote to control the servos. 
+
+> Reading & writing are done in **separate threads**.
 
 
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
