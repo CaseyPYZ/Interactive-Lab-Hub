@@ -92,6 +92,12 @@ https://user-images.githubusercontent.com/37056925/141694910-911e0bb8-1271-4ff7-
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 ![Plant waterer](imgs/plant1.png?raw=true)
 
+![Pill Taking Reminder](https://user-images.githubusercontent.com/42874337/141883335-a442eba8-ea72-4295-95ed-5b6343096b06.png)
+
+![Remote Piano Lesson helper](https://user-images.githubusercontent.com/42874337/141883340-4568e3d4-6857-4980-87ea-7f0e51444f7c.png)
+
+
+
 ### Part C
 ### Streaming a Sensor
 
