@@ -98,6 +98,8 @@ https://user-images.githubusercontent.com/37056925/141694910-911e0bb8-1271-4ff7-
 
 ![Remote Piano Lesson helper](https://user-images.githubusercontent.com/42874337/141883340-4568e3d4-6857-4980-87ea-7f0e51444f7c.png)
 
+![lab6_pE_diagram1](https://user-images.githubusercontent.com/37056925/142034813-b2abcd5d-170c-41a3-8b56-1f756ab5ad24.jpeg)
+
 Placeholder: A giant billboard which displays the message with the most "upvotes" from the MQTT threads
 
 ### Part C
