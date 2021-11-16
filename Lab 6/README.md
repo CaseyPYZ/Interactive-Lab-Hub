@@ -169,6 +169,8 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **\*\*\*1. Explain your design\*\*\*** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
+**For this lab, we designed a fundamental prototype for our potential final project. The idea comes from a netflix series _Space Force_, which is an art device, with potential use in remote healthcare fields. Please see the video below:**
+
 https://user-images.githubusercontent.com/42874337/141866447-08171305-cf33-4ae6-b19a-00f89f40d4b0.mp4
 
 
