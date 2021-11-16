@@ -98,7 +98,7 @@ https://user-images.githubusercontent.com/37056925/141694910-911e0bb8-1271-4ff7-
 
 ![Remote Piano Lesson helper](https://user-images.githubusercontent.com/42874337/141883340-4568e3d4-6857-4980-87ea-7f0e51444f7c.png)
 
-
+Placeholder: A giant billboard which displays the message with the most "upvotes" from the MQTT threads
 
 ### Part C
 ### Streaming a Sensor
