@@ -173,6 +173,7 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 https://user-images.githubusercontent.com/42874337/141866447-08171305-cf33-4ae6-b19a-00f89f40d4b0.mp4
 
+The idea of this project is to build a remote hand-shaking system (that we call the handover) which allows people at different places to shake hands physically. As the video suggest, it can be an art focused project that being placed at two different political/cultural location at two opposite end of the world, which allows people from different culture and different place to meet and greet each other. Moreover, this project has a potential in remote healthcare for clinicians and physicians to perform caregiving tasks remotely.
 
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
 
