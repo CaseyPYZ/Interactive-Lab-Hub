@@ -39,11 +39,11 @@ class ServoThread(threading.Thread):
         if msg == 'U':
             self.servo1.angle = 0
             self.servo2.angle = 0
-            time.sleep(1)
+            time.sleep(0.5)
         elif msg == 'D':
             self.servo1.angle = 90
             self.servo2.angle = 90
-            time.sleep(1)
+            time.sleep(0.5)
 
     def run(self):
         # Subscirbe to topic
@@ -119,7 +119,7 @@ if __name__ == '__main__':
     SERVO_PORT_2 = 15
 
     # MQTT Topics
-    READ_FROM = 'A'
+    READ_FROM = 'B'
     WRITE_TO = 'A'
     READ_TOPIC = 'IDD/kcp/talking_ps/' + READ_FROM
     WRITE_TOPIC = 'IDD/kcp/talking_ps/' + WRITE_TO
