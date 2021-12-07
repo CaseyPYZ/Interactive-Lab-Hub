@@ -83,14 +83,14 @@ if __name__ == '__main__':
     # MQTT Topics
     READ_FROM = 'A'
     WRITE_TO = 'A'
-    READ_TOPIC = 'IDD/kcp/talking_ps/' + READ_FROM
-    WRITE_TOPIC = 'IDD/kcp/talking_ps/' + WRITE_TO
+    READ_TOPIC = 'IDD/kcp/talking_ps/' + READ_FROM + '/'
+    WRITE_TOPIC = 'IDD/kcp/talking_ps/' + WRITE_TO + '/'
     
 
     try:
         for i in range(SERVO_NUM):
             mqtt_client = set_mqtt_connection()
-            servo_thread = ServoThread('servo', GPIO, SERVO_PINS[i], mqtt_client, READ_TOPIC)
+            servo_thread = ServoThread('servo', GPIO, SERVO_PINS[i], mqtt_client, READ_TOPIC+str(i))
             servo_threads.append(servo_thread)
 
         for i in range(SERVO_NUM):
