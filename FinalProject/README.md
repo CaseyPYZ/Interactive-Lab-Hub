@@ -70,7 +70,14 @@ We found the tape is not strong enough to hole the sensors on the glove and make
 
 #### 3. Final Device
 
-After setting up the glove, our pi was then able to read in data from flexisensors on it and then send signals to the other pi that controls the hand model remotely over MQTT server (technical details see programming implementaton section). In order to map the finger movement from the glove to the hand, 
+After setting up the glove, our pi was then able to read in data from flexisensors on it and then send signals to the other pi that controls the hand model remotely over MQTT server (technical details see programming implementaton section). In order to map the finger movement from the glove to the hand, we have utilized 5 servo motors to control the strings of the hand model. Each motor is attached to one finger, which coresponds to the signal sent by hand movement in the glove. 
+
+![image](https://user-images.githubusercontent.com/42874337/145892997-01a97665-bdd2-46f8-9255-414a09e976b5.png)
+
+We have also attached the wrist part of the hand model to a monitor stand, which allows a screen to be placed on top for video while hand at the bottom for handshake. 
+
+https://user-images.githubusercontent.com/42874337/145891914-09b46474-12a8-48d4-9788-9f4e4136ffe1.mp4
+
 
 ### Programming Implementation
 
