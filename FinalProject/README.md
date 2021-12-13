@@ -53,7 +53,7 @@ https://user-images.githubusercontent.com/42874337/145883689-247aa64c-254c-4f4c-
 
 In order to accurately detect the hand gesture made from the input end, we decide to use flexisensors (bending sensor) that would be able to detect the change of resistance within a circuit when bended. 
 
-This is how we connect a flexisensor to raspberry pi (through a fratboard).
+This is how we connect a flexisensor to raspberry pi (through a breadboard).
 
 ![image](https://user-images.githubusercontent.com/42874337/145885891-a060bdc2-a079-4911-a65e-e0aa2aa3ee88.png)
 
@@ -69,6 +69,8 @@ We found the tape is not strong enough to hole the sensors on the glove and make
 ![image](https://user-images.githubusercontent.com/42874337/145887373-9fec48b8-57c4-474a-b594-debecb9b85b7.png)
 
 #### 3. Final Device
+
+After setting up the glove, our pi was then able to read in data from flexisensors on it and then send signals to the other pi that controls the hand model remotely over MQTT server (technical details see programming implementaton section). In order to map the finger movement from the glove to the hand, 
 
 ### Programming Implementation
 
