@@ -35,9 +35,21 @@ Here was our project plan that we set up before the start of actual project. We 
 
 ## User Test
 
+After constructing the initial physical prototype we tested the concept with a handful of peers. We let our testers participate at both ends of the interaction (both shaking the hand and wearing the glove which controls the hand) and noted down any bugs in our implementation and our user feedback. From our testing we noticed that the sensors we attached to the glove were not bending along with the movement of the thumb (as it is normally angled differently from other fingers). We also received feedback that performing a handshake without establishing eye contact was somewhat jarring, and that moving the hand felt unnatural as the device was not designed to support wrist movements.
+
 ## Improvement
 
+Upon receiving feedback from testing we iterated on the device to improve its functionality. We stripped down the sensor glove and reattached the flex sensors while a participant was wearing it to properly align the sensors with finger movements. We also created a “wrist” model in CAD and 3D printed a hollow version out of soft material; the soft material allows the hand to have some flex along the wrist joint after being mounted. Lastly, we decided to integrate a display into our device and broadcast Zoom video through it to give the user another participant to look at while interacting with our device.
+
+
 ## Presentation & Impact
+
+In our demo, we presented the device in two different portions; a read side where users could shake the artificial hand, and a write side where users could send signals to move the hand. The read side was created by combining our artificial hand attached to servo motors with a monitor stand and a display. The stand could be adjusted so that the display featuring another participant’s face could be eye-level and that the hand was closer to the user’s waist.
+
+The write portion consisted of flex sensors soldered and glued onto a glove, which were connected to a circuit board sending signals to the pi. The sensor glove was designed so that anyone who put the glove on correctly (on their right hand with sensors facing down) could operate the hand remotely, as the hand is meant to copy their finger movements.
+
+On the demo day, we had a lot of wires and electrical components visible to the user for the purpose of explaining our implementation and easily accessing parts in case of repairs. However, due this we noticed some apprehension in users physically touching and interacting with both read and write portions of the device. A more polished version would have the hardware hidden away so the users would be comfortable with interacting with it.
+
 
 ## Reflection
 
