@@ -29,6 +29,13 @@ Here was our project plan that we set up before the start of actual project. We 
 
 ## Procedure
 
+### Parts Used
+
+* Raspberry Pi
+* MCP3008 ADC Module
+* Servo Motor(s): SG90 9g
+
+
 ### Physical Prototyping
 
 #### 1. Hand part (controlled)
@@ -86,6 +93,119 @@ https://user-images.githubusercontent.com/42874337/145894466-4d5b5b00-47e2-4226-
 
 
 ### Programming Implementation
+
+
+#### **Reading Flex Sensors: Analog Input for Raspberry Pi**
+
+In this project, we are using flex sensors which give analog values as our input. Since raspberry Pis do not inheritly have analog inputs, adding analog inputs from sensors to Raspberry Pi is one of the major technical focal points we had for this project.
+
+**0 - Threading**
+
+In this project, we are working with 5 flex sensors, each controlling their own corresponding servo motor. In order for these 5 channels of data transmission to work smoothly without interfering with each other, we used threading in our program.
+
+Each flex sensor and servo motor are on their own thread. One thing to notice is that MQTT does not support multi-threading on a single client, so we established a separate MQTT connect (client) for each thread. 
+
+Each pair of flex sensor and servo motor communicate through their own MQTT topic named after the servo motor's pin number.
+
+**1 - Setting Up ADC Module**
+
+In order for our raspberry pi to read analog sensor values, we will need a Analog-to-Digital-Converter (ADC) Module.
+
+We chose to use *MCP3008 8-channel ADC module*, because it is well-compatible with CircuitPython microcontroller boards and computer that has GPIO and Python, with the help of **adafruit_mcp3xxx.mcp3008** module.
+
+We followed the steps in this very helpful adafruit tutorial by Kattni Rembor:
+
+>**[MCP3008 - 8-Channel 10-Bit ADC With SPI Interface](https://learn.adafruit.com/mcp3008-spi-adc/python-circuitpython)**
+
+**1.1 Wiring**
+
+For circuit wiring, the MCP3008 ADC modules needs to be connected to the Pi as shown here:
+
+![MCP3008 circuit](./img/adafruit_products_raspi_MCP3008_spi_bb.png 'MCP3008 Circuit')
+
+> * MCP3008 CLK to Pi SCLK 
+> * MCP3008 DOUT to Pi MISO
+> * MCP3008 DIN to Pi MOSI
+> * MCP3008 CS to Pi D5
+> * MCP3008 VDD to Pi 3.3V
+> * MCP3008 VREF to Pi 3.3V
+> * MCP3008 AGND to Pi GND
+> * MCP3008 DGND to Pi GND
+> * MCP3008 CH0 to Potentiometer middle pin
+> * Potentiometer left pin to Pi GND
+> * Potentiometer right pin to Pi 3.3V
+
+**1.2 Programming Setup**
+
+Using modules *busio*, *digitalio*, *board* and *adafruit_mcp3xxx.mcp3008*, we are able to establish channels corresponding to the 8 channels of MCP3008, and read the raw ADC values and voltages from them.
+
+Following is a piece of sample setup code.
+
+```python
+import busio
+import digitalio
+import board
+import adafruit_mcp3xxx.mcp3008 as MCP
+from adafruit_mcp3xxx.analog_in import AnalogIn
+
+spi = busio.SPI(clock=board.SCK, MISO=board.MISO, MOSI=board.MOSI)
+cs = digitalio.DigitalInOut(board.D5)
+mcp = MCP.MCP3008(spi, cs)
+channel = AnalogIn(mcp, MCP.P0)
+
+### Now you can read inputs through the following properties
+# voltage: the voltage from the ADC pin as a floating point value 
+# value  : the value of an ADC pin as an integer.
+
+print('Raw ADC Value: ', channel.value)
+print('ADC Voltage: ' + str(channel.voltage) + 'V')
+
+```
+
+**2 - Flex Sensors**
+
+We choose to use flex sensors to detect finger bending. Flex sensors are basically resistors that change value based on how much their flexed. If they're unflexed, the resistance is about ~25KΩ. When flexed all the way the resistance rises to ~100KΩ. 
+
+They are very similar to Force Sensitive Resistors (FSRs) which are also value-changing resistors, so we followed the following adafruit tutorial on FSRs by lady ada to set up our flex sensors.
+
+>**[Force Sensitive Resistor (FSR)](https://learn.adafruit.com/force-sensitive-resistor-fsr/using-an-fsr)**
+
+
+**2.1 Wiring**
+
+![Flex Sensor Wiring](./img/force___flex_fsrpulldowndia.png 'Flex Sensor Wiring')
+
+The flex sensors are wired as follows just like many other sensors. Wire the sensor up one pin to a 3.3V pin of your RPI and the other pin to a ground pin, in serial with a resistor of your choice. We used a **6k8Ω** resistor in our circuit.
+
+The extra resistor used here is to put a capita on the voltage distributed to the flex sensor. It's sometimes used to protect the sensor itself or the controller board. In our case, since we are using a 3.3V power from the RPi, the extra resistor is not necessary protection-wise.
+
+Value of the extra resistor can vary depending on how wide you want the voltage range on the sensor to be. In other words, it controls the **sensitivity** of your sensor. This will have an affect on how you map the values on software level.
+
+Use another wire to connect this subcircuit to a data pin. The graph is demostrating the circuit with an Arduino board, **in our case, the data pin would be one of the 8 channels of our MCP3008 module**.
+
+The flex sensor is non-polarized, so the two pins can be connected in either direction.
+
+**2.2 Programming**
+
+With our circuit setup and choice of resistance, the values our flex sensors give approximately fall in the range of **[0.2V, 0.8V]**.
+
+For simplicity, we have the flex sensor control system set to a binary state. When the voltage read from the sensor is above a set value (meaning that sensor is being bent), we send a "T" message to the MQTT server for the corresponding servo motor, which will then turn to an 'activated' mode (turning 180 degree) upon reading the message. Similarly, when the voltage value is delow a set value, we send a "F" message to the MQTT server for the corresponding servo motor, which will then turn to a 'deactivated' mode (turning 180 degree) upon reading the message.
+
+Note that on idle state, the voltage values read from the sensor are not still, but rather shakea a little in a certain range. In our case, it's 0.5V ~ 0.7V. Thus, we set a threshold of 0.2V to separate the ON and OFF value ranges for the system.
+
+```python
+if volt > THRESHOLDS[self.s_pin] + VOLT_THRESHOLD:
+    val = "T"
+```
+
+This way, the flex sensors serve pretty well as switches for their corresponding servo motors.
+
+
+#### **Servo Motor Control**
+
+
+
+
 
 ## User Test
 
