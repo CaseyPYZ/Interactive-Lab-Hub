@@ -33,6 +33,22 @@ Here was our project plan that we set up before the start of actual project. We 
 
 #### 1. Hand part (controlled)
 
+(Details about hand model)
+We have 3-D printed the whole hand, with different materials. We started with solid PCA materials for all parts at the beginning, as shwon on the picture below:
+
+![image](https://user-images.githubusercontent.com/42874337/145881453-a77b494e-2c8b-4c88-9379-402507bb385e.png)
+
+However, the problem was the hand was not able to move since the PCA material is not flexible enough. We have then reprinted all the joints using another flexible material, which matains a certain shape while able to bend as we expected: 
+
+![image](https://user-images.githubusercontent.com/42874337/145881701-0b2c480a-a4b8-4db0-bff3-1fedcea1022f.png)
+
+We have also printed a wrist part using the same materials as joints to allow slight wrist movement when shaking hands.
+
+Here's the final hand model that we developed, that controlled by a string for each finger, and all fingers can move seperately. 
+
+https://user-images.githubusercontent.com/42874337/145883689-247aa64c-254c-4f4c-9deb-1bc4932a7b6e.mp4
+
+
 #### 2. Gloves part (controller)
 
 #### 3. Final Device
