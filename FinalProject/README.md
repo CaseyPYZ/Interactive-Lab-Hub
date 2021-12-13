@@ -51,6 +51,23 @@ https://user-images.githubusercontent.com/42874337/145883689-247aa64c-254c-4f4c-
 
 #### 2. Gloves part (controller)
 
+In order to accurately detect the hand gesture made from the input end, we decide to use flexisensors (bending sensor) that would be able to detect the change of resistance within a circuit when bended. 
+
+This is how we connect a flexisensor to raspberry pi (through a fratboard).
+
+![image](https://user-images.githubusercontent.com/42874337/145885891-a060bdc2-a079-4911-a65e-e0aa2aa3ee88.png)
+
+![image](https://user-images.githubusercontent.com/42874337/145886024-e8167439-db86-4552-afd7-0a185f537f02.png)
+
+After making sure of the sensor's ability of outputing continuous data, we extend it using wires and attached 5 flexisensors to a glove on the palm side. 
+
+![image](https://user-images.githubusercontent.com/42874337/145886390-ce40f184-7539-409c-90fa-a35e2df7a4db.png)
+
+We found the tape is not strong enough to hole the sensors on the glove and makes it too fragile, so we decided to solder the sensors to the wires directly. 
+
+![image](https://user-images.githubusercontent.com/42874337/145887345-5ebd45c1-0a89-449f-ae86-ff95b42f0b1a.png)
+![image](https://user-images.githubusercontent.com/42874337/145887373-9fec48b8-57c4-474a-b594-debecb9b85b7.png)
+
 #### 3. Final Device
 
 ### Programming Implementation
@@ -70,7 +87,11 @@ In our demo, we presented the device in two different portions; a read side wher
 
 The write portion consisted of flex sensors soldered and glued onto a glove, which were connected to a circuit board sending signals to the pi. The sensor glove was designed so that anyone who put the glove on correctly (on their right hand with sensors facing down) could operate the hand remotely, as the hand is meant to copy their finger movements.
 
-On the demo day, we had a lot of wires and electrical components visible to the user for the purpose of explaining our implementation and easily accessing parts in case of repairs. However, due this we noticed some apprehension in users physically touching and interacting with both read and write portions of the device. A more polished version would have the hardware hidden away so the users would be comfortable with interacting with it.
+![image](https://user-images.githubusercontent.com/42874337/145887507-4b26d295-4672-4f2b-bc13-8cb9526e797f.png)
+
+On the presentation day, we had a lot of wires and electrical components visible to the user for the purpose of explaining our implementation and easily accessing parts in case of repairs. However, due this we noticed some apprehension in users physically touching and interacting with both read and write portions of the device. A more polished version would have the hardware hidden away so the users would be comfortable with interacting with it.
+
+![image](https://user-images.githubusercontent.com/42874337/145887526-f954748b-8515-42ed-be8f-dbb3c12b127d.png)
 
 
 ## Reflection
