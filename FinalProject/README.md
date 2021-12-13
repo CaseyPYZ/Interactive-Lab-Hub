@@ -24,7 +24,8 @@ After completing the device design, we started with testing some basic technical
 https://user-images.githubusercontent.com/37056925/141871832-587517cf-29a8-4276-8d40-63e9abbc3f79.mp4
 
 Here was our project plan that we set up before the start of actual project. We have basically followed the workflow as we planned, but make slight changes to the way we achieve all the technical details and also improvised a little on the physical prototyping. 
-https://github.com/CaseyPYZ/Interactive-Lab-Hub/blob/Fall2021/FinalProject/IDDFinalProjectPlan.docx
+
+[Project Plan](https://github.com/CaseyPYZ/Interactive-Lab-Hub/blob/Fall2021/FinalProject/IDDFinalProjectPlan.docx)
 
 ## Procedure
 
