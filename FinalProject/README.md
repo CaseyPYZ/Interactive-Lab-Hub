@@ -78,6 +78,12 @@ We have also attached the wrist part of the hand model to a monitor stand, which
 
 https://user-images.githubusercontent.com/42874337/145891914-09b46474-12a8-48d4-9788-9f4e4136ffe1.mp4
 
+#### 4. Designer Test
+
+Here's the video record of the first attempt of the designer's test:
+
+https://user-images.githubusercontent.com/42874337/145894466-4d5b5b00-47e2-4226-8628-a017a9ec071a.mp4
+
 
 ### Programming Implementation
 
@@ -102,6 +108,11 @@ On the presentation day, we had a lot of wires and electrical components visible
 
 ![image](https://user-images.githubusercontent.com/42874337/145887526-f954748b-8515-42ed-be8f-dbb3c12b127d.png)
 
+We have also presented the project during the Open Studio Day at Maker Lab, we have received many practical advices from visitors and peers like:
 
-## Reflection
+1. Back string to control open movement of the fingers
+2. Scale the movement and map it to the hand model more accurately
+3. Put the flexisensors on the back of the gloves
+
+We are also the only project throughout the whole open studio that being posted by the official Cornell Tech Instagram!
 
