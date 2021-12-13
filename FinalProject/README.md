@@ -1,30 +1,39 @@
-Big Idea:
-Our Final Project device is a distributed handshake system that is meant to facilitate communication and connections between two users who are physically located in separate locations. The device includes two co-located robotic hands which move and operate on servo motors connected to the wrist joint and fingers. The two hands would move in a handshake motion on inputs from the users. If the users time sending the handshake signal well and the two hands successfully make contact, a contact sensor sends a positive feedback signal to the users.
 
+# Project Handover 
 
-Timeline:
-Nov 18th – Talk about ideas and submit Project Plan 
-Nov 19th – 26th – Iterate on project plan and create hardware setups through cardboard or 3D printing
-Nov 27th – Dec 4th   – Write software portion of the project and correct hardware bugs
-Dec 5th - Dec 7th – Video Editing and make project presentation
-Dec 8th – Dec 12th – Write up and Documentation
-Dec 13th – Contingency day for emergencies
-Dec 14th - Copious amounts of alcohol consumption to rehabilitate the team’s mental health
+## Idea Formation
 
+### Idea Generation
 
-Parts Needed:
-•	3d printed or cardboard hands
-•	10x servo motors
-•	Fishing wire or taut string
-•	Copper contact material
-•	Contact sensor
+Our original idea was initially inspired by this clip from a Netflix show *Space Force*. 
 
+https://user-images.githubusercontent.com/42874337/141866447-08171305-cf33-4ae6-b19a-00f89f40d4b0.mp4
 
-Risks/Contingencies:
-3d printing being too complicated
-Contact sensors not working as intended
-Build falls apart due to weight and structural issues
+During the age of pandemic, our device was then inspired by the increasing prevalence of virtual meetings. In the recent years, more and more first encounters between people occurred through a video conference or zoom meeting instead of actual presenting in a physical space. A remote handshaking device would be a art-oriented, but symbolic project that reflects the society's needs. As the technical details being set, this could also have potential practical usage as products that would allow people to perform delicate but dangerous tasks remotely like defusing a bomb, or operate a surgery if physical present is not avaliable. 
 
+### Sketch
 
-Fall Back Plan:
-Simpler version: high five machine
+Here is our sketch of the device:
+
+![HandOver Sketch](https://user-images.githubusercontent.com/37056925/141871861-85184969-8062-4a41-a4cd-aa189144ba8d.jpeg)
+
+### Technical detail Set-Up
+
+After completing the device design, we started with testing some basic technical details to ensure the idea is achivable, here's the video record of our first attempt to communicate over Pi and control motors from the other side using joysticks over MQTT server. This set up the basic ideas of how are we going to remotely control the hand. 
+
+https://user-images.githubusercontent.com/37056925/141871832-587517cf-29a8-4276-8d40-63e9abbc3f79.mp4
+
+## Procedure
+
+### Physical Prototyping
+
+### Programming Implementation
+
+## User Test
+
+## Improvement
+
+## Presentation & Impact
+
+## Reflection
+
