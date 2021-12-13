@@ -31,6 +31,12 @@ Here was our project plan that we set up before the start of actual project. We 
 
 ### Physical Prototyping
 
+#### 1. Hand part (controlled)
+
+#### 2. Gloves part (controller)
+
+#### 3. Final Device
+
 ### Programming Implementation
 
 ## User Test
