@@ -306,5 +306,9 @@ We have also presented the project during the Open Studio Day at Maker Lab, we h
 2. Scale the movement and map it to the hand model more accurately
 3. Put the flex sensors on the back of the gloves
 
+
+https://user-images.githubusercontent.com/37056925/145921138-70e295c3-cfb1-4d0b-ac98-946598ac7d0e.mp4
+
+
 We are also the only project throughout the whole open studio that being posted by the official Cornell Tech Instagram!
 
