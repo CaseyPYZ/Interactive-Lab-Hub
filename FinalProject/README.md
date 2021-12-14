@@ -298,6 +298,15 @@ The write portion consisted of flex sensors soldered and glued onto a glove, whi
 
 On the presentation day, we had a lot of wires and electrical components visible to the user for the purpose of explaining our implementation and easily accessing parts in case of repairs. However, due to this, we noticed some apprehension in users physically touching and interacting with both read and write portions of the device. A more polished version would have the hardware hidden away so the users would be comfortable with interacting with it.
 
+
+https://user-images.githubusercontent.com/37056925/145921278-def8245b-5fa5-4fc2-96b9-587f2f663dad.mp4
+
+https://user-images.githubusercontent.com/37056925/145921265-f0150243-b92a-4f15-8cce-60e42822bf98.mp4
+
+https://user-images.githubusercontent.com/37056925/145921304-8d724e34-a5e6-4eb0-a582-a9f4e74fd9db.mp4
+
+
+
 ![Write End](https://user-images.githubusercontent.com/42874337/145887526-f954748b-8515-42ed-be8f-dbb3c12b127d.png)
 
 We have also presented the project during the Open Studio Day at Maker Lab, we have received many practical advices from visitors and peers like:
