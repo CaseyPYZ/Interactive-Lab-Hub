@@ -214,7 +214,7 @@ This way, the flex sensors serve pretty well as switches for their corresponding
 
 Finger movements are controled by servo motors. We used SG90 9g Servo motors in this project.
 
-![SG90 Servo Motor](./img/servom_sg90.jpeg 'SG90 Servo Motor')
+![SG90 Servo Motor](./img/servo_motor_sg90.jpeg 'SG90 Servo Motor')
 
 > The SG90 9g servo motors provides only 9g of pulling power, which is quite limited. In order for it to smoothly work for our hand model, we modified the original hinge design by cutting off its consealed sides to make it more flexible.
 
