@@ -205,6 +205,9 @@ if volt > THRESHOLDS[self.s_pin] + VOLT_THRESHOLD:
 
 This way, the flex sensors serve pretty well as switches for their corresponding servo motors.
 
+https://user-images.githubusercontent.com/37056925/145922772-44c89110-00db-4159-be89-3dcd35dc9fc4.mp4
+
+
 
 #### **Servo Motor Control**
 
@@ -290,9 +293,23 @@ In our demo, we presented the device in two different portions; a read side wher
 
 The write portion consisted of flex sensors soldered and glued onto a glove, which were connected to a circuit board sending signals to the pi. The sensor glove was designed so that anyone who put the glove on correctly (on their right hand with sensors facing down) could operate the hand remotely, as the hand is meant to copy their finger movements.
 
+![dd_final_project_pre_pic_1](https://user-images.githubusercontent.com/37056925/145921421-aaaed9dd-60b9-4447-9e37-bb4f09589da9.jpeg)
+
 ![Read End](https://user-images.githubusercontent.com/42874337/145887507-4b26d295-4672-4f2b-bc13-8cb9526e797f.png)
 
+![dd_final_project_pre_pic_2](https://user-images.githubusercontent.com/37056925/145921435-dc1fb387-b82c-447f-84e8-8000df8db530.jpeg)
+
+
 On the presentation day, we had a lot of wires and electrical components visible to the user for the purpose of explaining our implementation and easily accessing parts in case of repairs. However, due to this, we noticed some apprehension in users physically touching and interacting with both read and write portions of the device. A more polished version would have the hardware hidden away so the users would be comfortable with interacting with it.
+
+
+https://user-images.githubusercontent.com/37056925/145921278-def8245b-5fa5-4fc2-96b9-587f2f663dad.mp4
+
+https://user-images.githubusercontent.com/37056925/145921265-f0150243-b92a-4f15-8cce-60e42822bf98.mp4
+
+https://user-images.githubusercontent.com/37056925/145921304-8d724e34-a5e6-4eb0-a582-a9f4e74fd9db.mp4
+
+
 
 ![Write End](https://user-images.githubusercontent.com/42874337/145887526-f954748b-8515-42ed-be8f-dbb3c12b127d.png)
 
@@ -301,6 +318,10 @@ We have also presented the project during the Open Studio Day at Maker Lab, we h
 1. Back string to control open movement of the fingers
 2. Scale the movement and map it to the hand model more accurately
 3. Put the flex sensors on the back of the gloves
+
+
+https://user-images.githubusercontent.com/37056925/145921138-70e295c3-cfb1-4d0b-ac98-946598ac7d0e.mp4
+
 
 We are also the only project throughout the whole open studio that being posted by the official Cornell Tech Instagram!
 
