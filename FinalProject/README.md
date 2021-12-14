@@ -221,7 +221,7 @@ Upon receiving feedback from testing we iterated on the device to improve its fu
 
 First we stripped down the sensor glove and reattached the flex sensors while a participant was wearing it to properly align the sensors with finger movements. 
 
-We also created a “wrist” model in CAD and 3D printed a hollow version out of soft material; the soft material allows the hand to have some flex and motion along the wrist joint after being mounted.
+We also created a “wrist” model in CAD and 3D printed a hollow version out of soft material; the soft material allows the hand to have some flex and motion along the wrist joint after being mounted. The wrist has a pass through hole for the strings.
 
 <img src="https://github.com/CaseyPYZ/Interactive-Lab-Hub/blob/Fall2021/FinalProject/img/IMG_1957.jpg" height="600" width="400">
 
