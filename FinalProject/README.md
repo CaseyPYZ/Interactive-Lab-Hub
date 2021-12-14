@@ -45,11 +45,7 @@ Here was our project plan that we set up before the start of actual project. We 
 > * Hinge (blue parts): TPU (flexible)
 
 (Details about hand model)
-<<<<<<< Updated upstream
 We have 3-D printed the whole hand, with different materials. We started with solid PCA materials for all parts at the beginning, as shown on the picture below:
-=======
-We have 3-D printed the whole hand, with different materials. We started with solid PLA materials for all parts at the beginning, as shwon on the picture below:
->>>>>>> Stashed changes
 
 ![image](https://user-images.githubusercontent.com/42874337/145881453-a77b494e-2c8b-4c88-9379-402507bb385e.png)
 
