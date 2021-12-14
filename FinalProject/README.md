@@ -294,7 +294,12 @@ In our demo, we presented the device in two different portions; a read side wher
 
 The write portion consisted of flex sensors soldered and glued onto a glove, which were connected to a circuit board sending signals to the pi. The sensor glove was designed so that anyone who put the glove on correctly (on their right hand with sensors facing down) could operate the hand remotely, as the hand is meant to copy their finger movements.
 
+![dd_final_project_pre_pic_1](https://user-images.githubusercontent.com/37056925/145921421-aaaed9dd-60b9-4447-9e37-bb4f09589da9.jpeg)
+
 ![Read End](https://user-images.githubusercontent.com/42874337/145887507-4b26d295-4672-4f2b-bc13-8cb9526e797f.png)
+
+![dd_final_project_pre_pic_2](https://user-images.githubusercontent.com/37056925/145921435-dc1fb387-b82c-447f-84e8-8000df8db530.jpeg)
+
 
 On the presentation day, we had a lot of wires and electrical components visible to the user for the purpose of explaining our implementation and easily accessing parts in case of repairs. However, due to this, we noticed some apprehension in users physically touching and interacting with both read and write portions of the device. A more polished version would have the hardware hidden away so the users would be comfortable with interacting with it.
 
