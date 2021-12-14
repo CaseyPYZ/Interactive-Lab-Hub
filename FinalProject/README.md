@@ -325,3 +325,14 @@ https://user-images.githubusercontent.com/37056925/145921138-70e295c3-cfb1-4d0b-
 
 We are also the only project throughout the whole open studio that being posted by the official Cornell Tech Instagram!
 
+
+## Reflections
+
+In the future we should 3D print our materials in batches instead of all at once. During our initial print of the hand we left a large print there overnight and did not realize that the printer had stopped working; we ended up having to reprint many of the parts and wasted much of our lead time. 
+
+During our prototyping we started out with a breadboard to connect our sensors to the raspberry pi. This was fine when we were just trying to figure out the circuitry and had to iterate, but we found that sometimes wires would come loose and we would have to troubleshoot the entire board. In a more polished version of the device we would have liked to solder circuit boards so we would not have to treat the device so gingerly.
+
+Another main reflection we have for this project is that sensors can be difficult to work with, and there are things that can be done to make the process easier. We worked with flex sensors in our project, which did serve the purpose very well, but there was indeed room for improvement. First, it was later in the process that we realized the controlling glove would benefit from an alternative design where the sensors are placed on the back of the hand. We did not realize before attaching the sensors to the inside of the glove that bending fingers would cause the sensors to bend in a “S” shape which would make its voltage changes from different sections cancel each other out. Second, the sensors were a bit too long, which also contributed to the problem above. All these problems could’ve been discovered then avoided if we started by building a minimal prototype before going all the way through, and this is one of the most important things we learned from the process.
+
+Last but not least, the development procedure reminded us on multiple occasions of the importance of feedback. During functional checkoff, Alexandra and Rei pointed out that though our core technical functionality is working well, we should also think about the overall setup and presentation of our project, which should be designed in a way that conveys our message to the audience. This was a wake up call for us at the time, and made us realize that we’ve been so focused on solving our functional issues that we almost overlooked the importance of the overall presentation and delivery of the installation.
+
