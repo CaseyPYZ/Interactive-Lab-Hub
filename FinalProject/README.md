@@ -40,12 +40,20 @@ Here was our project plan that we set up before the start of actual project. We 
 
 #### 1. Hand part (controlled)
 
+> Printing materials:
+> * Hand (red parts): PLA
+> * Hinge (blue parts): TPU (flexible)
+
 (Details about hand model)
+<<<<<<< Updated upstream
 We have 3-D printed the whole hand, with different materials. We started with solid PCA materials for all parts at the beginning, as shown on the picture below:
+=======
+We have 3-D printed the whole hand, with different materials. We started with solid PLA materials for all parts at the beginning, as shwon on the picture below:
+>>>>>>> Stashed changes
 
 ![image](https://user-images.githubusercontent.com/42874337/145881453-a77b494e-2c8b-4c88-9379-402507bb385e.png)
 
-However, the problem was the hand was not able to move since the PCA material is not flexible enough. We have then reprinted all the joints using another flexible material, which matains a certain shape while able to bend as we expected: 
+However, the problem was the hand was not able to move since the PLA material is not flexible enough. We have then reprinted all the joints using another flexible material, which matains a certain shape while able to bend as we expected: 
 
 ![image](https://user-images.githubusercontent.com/42874337/145881701-0b2c480a-a4b8-4db0-bff3-1fedcea1022f.png)
 
@@ -58,15 +66,16 @@ https://user-images.githubusercontent.com/42874337/145883689-247aa64c-254c-4f4c-
 
 #### 2. Gloves part (controller)
 
-In order to accurately detect the hand gesture made from the input end, we decide to use flexisensors (bending sensor) that would be able to detect the change of resistance within a circuit when bended. 
+In order to accurately detect the hand gesture made from the input end, we decide to use flex sensors (bending sensor) that would be able to detect the change of resistance within a circuit when bended. 
 
-This is how we connect a flexisensor to raspberry pi (through a breadboard).
+This is how we connect a flex sensor to raspberry pi (through a breadboard).
+> More details on wiring in the section below.
 
 ![image](https://user-images.githubusercontent.com/42874337/145885891-a060bdc2-a079-4911-a65e-e0aa2aa3ee88.png)
 
 ![image](https://user-images.githubusercontent.com/42874337/145886024-e8167439-db86-4552-afd7-0a185f537f02.png)
 
-After making sure of the sensor's ability of outputing continuous data, we extend it using wires and attached 5 flexisensors to a glove on the palm side. 
+After making sure of the sensor's ability of outputing continuous data, we extend it using wires and attached 5 flex sensors to a glove on the palm side. 
 
 ![image](https://user-images.githubusercontent.com/42874337/145886390-ce40f184-7539-409c-90fa-a35e2df7a4db.png)
 
@@ -77,7 +86,7 @@ We found the tape is not strong enough to hole the sensors on the glove and make
 
 #### 3. Final Device
 
-After setting up the glove, our pi was then able to read in data from flexisensors on it and then send signals to the other pi that controls the hand model remotely over MQTT server (technical details see programming implementaton section). In order to map the finger movement from the glove to the hand, we have utilized 5 servo motors to control the strings of the hand model. Each motor is attached to one finger, which coresponds to the signal sent by hand movement in the glove. 
+After setting up the glove, our pi was then able to read in data from flex sensors on it and then send signals to the other pi that controls the hand model remotely over MQTT server (technical details see programming implementaton section). In order to map the finger movement from the glove to the hand, we have utilized 5 servo motors to control the strings of the hand model. Each motor is attached to one finger, which coresponds to the signal sent by hand movement in the glove. 
 
 ![image](https://user-images.githubusercontent.com/42874337/145892997-01a97665-bdd2-46f8-9255-414a09e976b5.png)
 
@@ -203,9 +212,60 @@ This way, the flex sensors serve pretty well as switches for their corresponding
 
 #### **Servo Motor Control**
 
+Finger movements are controled by servo motors. We used SG90 9g Servo motors in this project.
+
+![SG90 Servo Motor](./img/servom_sg90.jpeg 'SG90 Servo Motor')
+
+> The SG90 9g servo motors provides only 9g of pulling power, which is quite limited. In order for it to smoothly work for our hand model, we modified the original hinge design by cutting off its consealed sides to make it more flexible.
+
+On software level, we are controlling the servo motors through Raspberry Pi's native GPIO (General Purpose Input/Output) pins using the **RPi.GPIO** module.
+
+We found this following blog post very helpful in setting up GPIO servo control:
+
+> [Servo Motor Control With Raspberry Pi by Ianc1999](https://www.instructables.com/Servo-Motor-Control-With-Raspberry-Pi/)
 
 
+Here's a piece of sample setup & clean up code:
 
+```python
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(03, GPIO.OUT)
+pwm = GPIO.PWM(03, 50)
+pwm.start(0)
+
+# ...
+
+pwm.stop()
+GPIO.cleanup()
+```
+
+Some background knowledge is needed on understanding how the tiling degree of a servo motor can be controlled by changing the frequency of the "ON" signal (high voltage) we are sending it in each PWM period:
+
+> The way a servo motor reads the information it's being sent is by using an electrical signal called PWM. PWM stands for "Pulse Width Modulation". That just means sending ON electrical signals for a certain amount of time, followed by an OFF period, repeated hundreds of times a second. **The amount of time the signal is on sets the angle the servo motor will rotate to.** In most servos, the expected frequency is 50Hz, or 3000 cycles per minute. Servos will set to 0 degrees if given a signal of .5 ms, 90 when given 1.5 ms, and 180 when given 2.5ms pulses. This translates to about 2.5-12.5% duty in a 50Hz PWM cycle. ([Ian1999's blog post](https://www.instructables.com/Servo-Motor-Control-With-Raspberry-Pi/))
+
+Specifications can be found in [SG90 servo motor's datasheet](./img/sg90_datasheet.pdf).
+
+The key piece of takeaway here is that "*the amount of time the signal is on sets the angle the servo motor will rotate to*", and the concept of "duty cycle" refers to the percentage of "ON" signal (high voltage) in a PWM period.
+
+The `set_angle` function in our code handles the calculation from desired tiling angle to corresponding duty cycle, as well as signal execution:
+
+```python
+def set_angle(self, angle):
+    duty = angle / 18 + 2
+    print("duty> ", duty)
+    self.GPIO.output(self.pin, True)
+    self.servo.ChangeDutyCycle(duty)
+    time.sleep(1)
+    self.GPIO.output(self.pin, False)
+    self.servo.ChangeDutyCycle(0)
+```
+
+
+Note that we took a OOP programming approach in our project in order to implement multi-threading.
+
+As mentioned previously, each servo runs on its own thread, and each thread has its own connection client to the MQTT server.  Whenever a servo thread reads a 'T' message from its own MQTT topic, it changes the dutyCycle of its corresponding servo by sending an output through its corresponding GPIO pin. Through these implementations, the servos react to the flex sensors on the glove.
 
 ## User Test
 
@@ -244,7 +304,7 @@ We have also presented the project during the Open Studio Day at Maker Lab, we h
 
 1. Back string to control open movement of the fingers
 2. Scale the movement and map it to the hand model more accurately
-3. Put the flexisensors on the back of the gloves
+3. Put the flex sensors on the back of the gloves
 
 We are also the only project throughout the whole open studio that being posted by the official Cornell Tech Instagram!
 
