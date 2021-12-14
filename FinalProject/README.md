@@ -209,11 +209,21 @@ This way, the flex sensors serve pretty well as switches for their corresponding
 
 ## User Test
 
-After constructing the initial physical prototype we tested the concept with a handful of peers. We let our testers participate at both ends of the interaction (both shaking the hand and wearing the glove which controls the hand) and noted down any bugs in our implementation and our user feedback. From our testing we noticed that the sensors we attached to the glove were not bending along with the movement of the thumb (as it is normally angled differently from other fingers). We also received feedback that performing a handshake without establishing eye contact was somewhat jarring, and that moving the hand felt unnatural as the device was not designed to support wrist movements.
+After constructing the initial physical prototype we tested the concept with a handful of peers. We let our testers participate at both ends of the interaction (both shaking the hand and wearing the glove which controls the hand) and noted down any bugs in our implementation and our user feedback. From our testing we noticed 3 main points of improvement
+
+1. The sensors we attached to the glove were not bending along with the movement of the thumb (as it is normally angled differently from other fingers). 
+2. Performing a handshake without establishing eye contact was somewhat jarring .
+3. Holding and shaking the hand felt unnatural as the device was not designed to support wrist movements.
 
 ## Improvement
 
-Upon receiving feedback from testing we iterated on the device to improve its functionality. We stripped down the sensor glove and reattached the flex sensors while a participant was wearing it to properly align the sensors with finger movements. We also created a “wrist” model in CAD and 3D printed a hollow version out of soft material; the soft material allows the hand to have some flex along the wrist joint after being mounted. Lastly, we decided to integrate a display into our device and broadcast Zoom video through it to give the user another participant to look at while interacting with our device.
+Upon receiving feedback from testing we iterated on the device to improve its functionality. 
+
+First we stripped down the sensor glove and reattached the flex sensors while a participant was wearing it to properly align the sensors with finger movements. We also created a “wrist” model in CAD and 3D printed a hollow version out of soft material; the soft material allows the hand to have some flex and motion along the wrist joint after being mounted.
+
+![Fresh Printed Wrist](https://github.com/CaseyPYZ/Interactive-Lab-Hub/blob/Fall2021/FinalProject/img/IMG_1958.JPG)
+
+Lastly, we decided to integrate a display into our device and broadcast Zoom video through it to give the user another participant to look at while interacting with the device.
 
 
 ## Presentation & Impact
