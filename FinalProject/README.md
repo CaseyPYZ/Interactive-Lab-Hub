@@ -41,7 +41,7 @@ Here was our project plan that we set up before the start of actual project. We 
 #### 1. Hand part (controlled)
 
 (Details about hand model)
-We have 3-D printed the whole hand, with different materials. We started with solid PCA materials for all parts at the beginning, as shwon on the picture below:
+We have 3-D printed the whole hand, with different materials. We started with solid PCA materials for all parts at the beginning, as shown on the picture below:
 
 ![image](https://user-images.githubusercontent.com/42874337/145881453-a77b494e-2c8b-4c88-9379-402507bb385e.png)
 
@@ -234,11 +234,11 @@ In our demo, we presented the device in two different portions; a read side wher
 
 The write portion consisted of flex sensors soldered and glued onto a glove, which were connected to a circuit board sending signals to the pi. The sensor glove was designed so that anyone who put the glove on correctly (on their right hand with sensors facing down) could operate the hand remotely, as the hand is meant to copy their finger movements.
 
-![image](https://user-images.githubusercontent.com/42874337/145887507-4b26d295-4672-4f2b-bc13-8cb9526e797f.png)
+![Read End](https://user-images.githubusercontent.com/42874337/145887507-4b26d295-4672-4f2b-bc13-8cb9526e797f.png)
 
-On the presentation day, we had a lot of wires and electrical components visible to the user for the purpose of explaining our implementation and easily accessing parts in case of repairs. However, due this we noticed some apprehension in users physically touching and interacting with both read and write portions of the device. A more polished version would have the hardware hidden away so the users would be comfortable with interacting with it.
+On the presentation day, we had a lot of wires and electrical components visible to the user for the purpose of explaining our implementation and easily accessing parts in case of repairs. However, due to this, we noticed some apprehension in users physically touching and interacting with both read and write portions of the device. A more polished version would have the hardware hidden away so the users would be comfortable with interacting with it.
 
-![image](https://user-images.githubusercontent.com/42874337/145887526-f954748b-8515-42ed-be8f-dbb3c12b127d.png)
+![Write End](https://user-images.githubusercontent.com/42874337/145887526-f954748b-8515-42ed-be8f-dbb3c12b127d.png)
 
 We have also presented the project during the Open Studio Day at Maker Lab, we have received many practical advices from visitors and peers like:
 
