@@ -209,7 +209,7 @@ This way, the flex sensors serve pretty well as switches for their corresponding
 
 ## User Test
 
-After constructing the initial physical prototype we tested the concept with a handful of peers. We let our testers participate at both ends of the interaction (both shaking the hand and wearing the glove which controls the hand) and noted down any bugs in our implementation and our user feedback. From our testing we noticed 3 main points of improvement
+After constructing the initial physical prototype we tested the concept with a handful of peers. We let our testers participate at both ends of the interaction (both shaking the hand and wearing the glove which controls the hand) and noted down any bugs in our implementation and our user feedback. From our testing we noticed 3 main points of improvement:
 
 1. The sensors we attached to the glove were not bending along with the movement of the thumb (as it is normally angled differently from other fingers). 
 2. Performing a handshake without establishing eye contact was somewhat jarring .
@@ -219,7 +219,9 @@ After constructing the initial physical prototype we tested the concept with a h
 
 Upon receiving feedback from testing we iterated on the device to improve its functionality. 
 
-First we stripped down the sensor glove and reattached the flex sensors while a participant was wearing it to properly align the sensors with finger movements. We also created a “wrist” model in CAD and 3D printed a hollow version out of soft material; the soft material allows the hand to have some flex and motion along the wrist joint after being mounted.
+First we stripped down the sensor glove and reattached the flex sensors while a participant was wearing it to properly align the sensors with finger movements. 
+
+We also created a “wrist” model in CAD and 3D printed a hollow version out of soft material; the soft material allows the hand to have some flex and motion along the wrist joint after being mounted.
 
 <img src="https://github.com/CaseyPYZ/Interactive-Lab-Hub/blob/Fall2021/FinalProject/img/IMG_1958.JPG" height="600" width="400">
 
