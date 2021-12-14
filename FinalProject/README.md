@@ -209,6 +209,9 @@ if volt > THRESHOLDS[self.s_pin] + VOLT_THRESHOLD:
 
 This way, the flex sensors serve pretty well as switches for their corresponding servo motors.
 
+https://user-images.githubusercontent.com/37056925/145922772-44c89110-00db-4159-be89-3dcd35dc9fc4.mp4
+
+
 
 #### **Servo Motor Control**
 
