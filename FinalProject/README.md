@@ -223,7 +223,7 @@ First we stripped down the sensor glove and reattached the flex sensors while a 
 
 We also created a “wrist” model in CAD and 3D printed a hollow version out of soft material; the soft material allows the hand to have some flex and motion along the wrist joint after being mounted.
 
-<img src="https://github.com/CaseyPYZ/Interactive-Lab-Hub/blob/Fall2021/FinalProject/img/IMG_1958.JPG" height="600" width="400">
+<img src="https://github.com/CaseyPYZ/Interactive-Lab-Hub/blob/Fall2021/FinalProject/img/IMG_1957.jpg" height="600" width="400">
 
 Lastly, we decided to integrate a display into our device and broadcast Zoom video through it to give the user another participant to look at while interacting with the device.
 
